@@ -1,0 +1,24 @@
+{
+  "name": "collegewalk",
+  "version": "1.0.0",
+  "description": "Node.js webapp that organizes data on \"Walk Scores\" of college towns in the US",
+  "main": "server.js",
+  "scripts": {
+    "test": "console.log(\"hi\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaunakb/collegewalk.git"
+  },
+  "author": "Shaunak Bhandarkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaunakb/collegewalk/issues"
+  },
+  "homepage": "https://github.com/shaunakb/collegewalk#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.6",
+    "ejs": "^2.6.1",
+    "jquery.tabulator": "^3.5.3"
+  }
+}

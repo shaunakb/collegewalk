@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		
+		<!-- leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+   crossorigin=""></script>
+		
+		<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		
+		<!-- tabulator -->
+		<link rel="stylesheet" href="css/tabulator.min.css">
+		<script src="js/tabulator.min.js"></script>
+		
+  </head>
+  <body>
+		<div id="kmap"></div>
+		
+		</div>
+    <div id="example-table"></div>
+		
+		<!-- initialize map -->
+		<script src="js/map.js"></script>
+		
+		<script type="text/javascript">
+			
+			$("#example-table").tabulator({
+				height: "600px",
+				columns: [
+					{title:"Name", field:"name", sortable:true, width:300},
+					{title:"City", field:"city", sortable:true, width:150},
+					{title:"State", field:"state", sortable:true},
+					{title:"Walk Score", field:"walk", sortable:true},
+					{title:"Walk Description", field:"walkdesc", sortable:true, width: 150},
+					{title:"Transit Score", field:"transit.score", sortable:true},
+					{title:"Transit Description", field:"transit.description", sortable:true, width:150},
+					{title:"Bike Score", field:"bike.score", sortable:true},
+					{title:"Bike Description", field:"bike.description", sortable:true, width:150}
+				]
+			});
+			
+			
+			$("#example-table").tabulator("setData", "data/walk.json");
+			
+			
+			
+		</script>
+  </body>
+</html>
